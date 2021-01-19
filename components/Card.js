@@ -1,6 +1,7 @@
 import React from "react";
+import { Button, Card } from "react-bootstrap";
 
-function Card(props) {
+function CardComponent(props) {
   return (
     <>
       <Card style={{ width: "18rem" }}>
@@ -21,4 +22,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default CardComponent;
