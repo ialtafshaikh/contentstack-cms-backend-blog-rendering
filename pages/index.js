@@ -9,7 +9,10 @@ import Card from "../components/Card";
 export default function Home(props) {
   return (
     <>
-      <Layout NavigationContent={{ navbarContent: props.navbar }}>
+      <Layout
+        NavigationContent={{ navbarContent: props.navbar }}
+        FooterContent={{ footerContent: props.footer }}
+      >
         <main>
           <div className="body-container">
             {props.blogs.map((blog, index) => {
@@ -37,11 +40,13 @@ export default function Home(props) {
 export const getStaticProps = async () => {
   const result = await getAllEnteries("blogs");
   const navbarData = await getAllEnteries("navbar");
-  // console.log(navbarData);
+  const footerData = await getAllEnteries("footer");
+
   return {
     props: {
       blogs: [...result],
       navbar: { ...navbarData[0] },
+      footer: { ...footerData[0] },
     },
   };
 };

@@ -5,6 +5,7 @@ import Footer from "./Footer";
 export default function Layout({
   children,
   title = "Home | Blogs",
+  FooterContent,
   NavigationContent,
 }) {
   return (
@@ -19,7 +20,7 @@ export default function Layout({
 
       {children}
 
-      <Footer />
+      <Footer {...FooterContent} />
     </>
   );
 }
