@@ -14,13 +14,13 @@ export default function Home(props) {
         FooterContent={{ footerContent: props.footer }}
       >
         <main>
-          <div className="body-container">
+          <div className="container">
             {props.blogs.map((blog, index) => {
               return index % 4 === 0 ? (
                 <Row key={index}>
                   {props.blogs.slice(index, index + 4).map((blog) => {
                     return (
-                      <Col className="py-2" key={blog.blogID}>
+                      <Col className="py-3" key={blog.blogID}>
                         <Card blog={blog} />
                       </Col>
                     );

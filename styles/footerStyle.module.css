@@ -1,0 +1,9 @@
+.socialLinks {
+  width: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.socialLinks:hover {
+  opacity: 0.5;
+}

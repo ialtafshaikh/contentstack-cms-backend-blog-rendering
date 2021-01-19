@@ -4,6 +4,10 @@
 
 @import "bootstrap";
 
+// * {
+//   border: 1px solid red;
+// }
+
 html,
 body {
   padding: 0;
@@ -26,15 +30,8 @@ a {
 }
 
 $secondary-color: #2f9ee5;
-// * {
-//   border: 1px solid red;
-// }
 
-.body-container {
-  margin: 20px 40px !important;
-}
-
-.container {
+.blog-container {
   margin: 30px;
   display: flex;
   flex-direction: row;
@@ -144,7 +141,7 @@ $secondary-color: #2f9ee5;
     }
   }
 
-  .container {
+  .blog-container {
     display: block;
     .blog-detail {
       width: 100%;
@@ -183,6 +180,11 @@ $secondary-color: #2f9ee5;
       display: block;
       margin-bottom: 10px;
     }
+  }
+
+  .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
   }
 }
 

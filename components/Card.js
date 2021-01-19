@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 function CardComponent(props) {
   return (
     <>
-      <Card style={{ width: "18rem" }}>
+      <Card>
         <Card.Img variant="top" src={props.blog.blog_banner_image.url} />
         <Card.Body>
           <Card.Title>{props.blog.title}</Card.Title>
