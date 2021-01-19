@@ -8,7 +8,12 @@ import footerStyles from "../styles/footerStyle.module.css";
 export default function Footer({ footerContent }) {
   return (
     <>
-      <footer style={{ position: "fixed", bottom: "0", width: "100%" }}>
+      <footer
+        style={{
+          position: "sticky",
+          width: "100%",
+        }}
+      >
         <Row>
           <Col sm="6" className="text-center px-5">
             {footerContent.copyright_text}
