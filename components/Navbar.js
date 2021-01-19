@@ -6,11 +6,11 @@ export default function Navbar() {
       <nav>
         <Link href="/">
           <a>Home</a>
-        </Link>{" "}
-        |
+        </Link>
+
         <Link href="/">
           <a>Blogs</a>
-        </Link>{" "}
+        </Link>
       </nav>
     </>
   );

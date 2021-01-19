@@ -1,9 +1,14 @@
+// components
+import Layout from "../components/Layout";
+
 export default function Home() {
   return (
-    <div>
-      <main>
-        <h1>Home Page</h1>
-      </main>
-    </div>
+    <>
+      <Layout>
+        <main>
+          <h1>Home Page</h1>
+        </main>
+      </Layout>
+    </>
   );
 }
