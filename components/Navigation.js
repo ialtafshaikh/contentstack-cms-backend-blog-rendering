@@ -14,7 +14,7 @@ export default function Navigation({ navbarContent }) {
         className="px-5"
       >
         <Navbar.Brand href="/">
-          <img src={navbarContent.company_logo.url} height="50" width="200" />
+          <Image src={navbarContent.company_logo.url} height="50" width="200" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="px-2">
