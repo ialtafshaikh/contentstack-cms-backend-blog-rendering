@@ -9,7 +9,7 @@ import Card from "../components/Card";
 export default function Home(props) {
   return (
     <>
-      <Layout>
+      <Layout NavigationContent={{ navbarContent: props.navbar }}>
         <main>
           <div className="body-container">
             {props.blogs.map((blog, index) => {
@@ -36,10 +36,12 @@ export default function Home(props) {
 
 export const getStaticProps = async () => {
   const result = await getAllEnteries("blogs");
-  // console.log(result);
+  const navbarData = await getAllEnteries("navbar");
+  // console.log(navbarData);
   return {
     props: {
       blogs: [...result],
+      navbar: { ...navbarData[0] },
     },
   };
 };
