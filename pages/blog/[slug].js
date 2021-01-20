@@ -56,7 +56,7 @@ function BlogDetail(props) {
   );
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const result = await getAllEnteries("blogs", {
     prop: "url",
     value: "/" + context.params.slug,
@@ -71,20 +71,6 @@ export const getStaticProps = async (context) => {
       navbar: { ...navbarData[0] },
       footer: { ...footerData[0] },
     },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const result = await getAllEnteries("blogs");
-  let paths = result.map((blog) => ({
-    params: {
-      slug: blog.url.slice(1),
-    },
-  }));
-
-  return {
-    paths,
-    fallback: true,
   };
 };
 
