@@ -31,7 +31,7 @@ a {
 
 $secondary-color: #2f9ee5;
 
-.blog-container {
+.blog-detail-container {
   margin: 30px;
   display: flex;
   flex-direction: row;
@@ -141,7 +141,7 @@ $secondary-color: #2f9ee5;
     }
   }
 
-  .blog-container {
+  .blog-detail-container {
     display: block;
     .blog-detail {
       width: 100%;
