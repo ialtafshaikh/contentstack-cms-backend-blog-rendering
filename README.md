@@ -1,4 +1,4 @@
-# Creating CMS Backend for Blog Rendering
+# CMS Backend for Blog Rendering
 
 Using contentstack as a backend for creating a content model for a blog website and designing the frontend using NextJS.
 
