@@ -18,8 +18,10 @@ function BlogDetail(props) {
         blogID: blogID,
       }
     );
-
-    router.push("/blog" + data.blog.url);
+    if (typeof data !== "undefined") {
+      router.push("/blog" + data.blog.url);
+      return;
+    }
   };
 
   return router.isFallback ? (
@@ -30,6 +32,7 @@ function BlogDetail(props) {
         title={props.blog.title}
         NavigationContent={{ navbarContent: props.navbar }}
         FooterContent={{ footerContent: props.footer }}
+        favicon="../../vercel.svg"
       >
         <main>
           <div className="blog-detail-container" id="blog">
@@ -57,21 +60,25 @@ function BlogDetail(props) {
 }
 
 export const getServerSideProps = async (context) => {
-  const result = await getAllEnteries("blogs", {
-    prop: "url",
-    value: "/" + context.params.slug,
-  });
+  try {
+    const result = await getAllEnteries("blogs", {
+      prop: "url",
+      value: "/" + context.params.slug,
+    });
 
-  const navbarData = await getAllEnteries("navbar");
-  const footerData = await getAllEnteries("footer");
+    const navbarData = await getAllEnteries("navbar");
+    const footerData = await getAllEnteries("footer");
 
-  return {
-    props: {
-      blog: { ...result[0] },
-      navbar: { ...navbarData[0] },
-      footer: { ...footerData[0] },
-    },
-  };
+    return {
+      props: {
+        blog: { ...result[0] },
+        navbar: { ...navbarData[0] },
+        footer: { ...footerData[0] },
+      },
+    };
+  } catch (err) {
+    return err;
+  }
 };
 
 export default BlogDetail;
