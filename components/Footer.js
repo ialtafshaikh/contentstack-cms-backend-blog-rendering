@@ -15,23 +15,24 @@ export default function Footer({ footerContent }) {
         }}
       >
         <Row>
-          <Col sm="6" className="text-center px-5">
+          <Col sm="6" className="text-center px-5" key={"100"}>
             {footerContent.copyright_text}
           </Col>
-          <Col sm="6" className="text-center">
-            <ul className="list-unstyled">
-              {footerContent.social_links.map((link, index) => {
+          <Col sm="6" className="text-center" key={"200"}>
+            <ul className="list-unstyled" key={"300"}>
+              {footerContent.social_links.map((link) => {
                 return (
-                  <>
-                    <li className="list-inline-item px-2" key={index}>
-                      <a href={link.link_url}>
-                        <FontAwesomeIcon
-                          icon={["fab", `${link.title}`]}
-                          className={footerStyles["socialLinks"]}
-                        />
-                      </a>
-                    </li>
-                  </>
+                  <li
+                    className="list-inline-item px-2"
+                    key={link._metadata.uid.toString()}
+                  >
+                    <a href={link.link_url}>
+                      <FontAwesomeIcon
+                        icon={["fab", `${link.title}`]}
+                        className={footerStyles["socialLinks"]}
+                      />
+                    </a>
+                  </li>
                 );
               })}
             </ul>

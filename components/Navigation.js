@@ -21,10 +21,8 @@ export default function Navigation({ navbarContent }) {
           <Nav className="ml-auto">
             {navbarContent.nav_links.map((link, index) => {
               return (
-                <Link href={link.href}>
-                  <a className={["nav-link"]} key={index}>
-                    {link.title}
-                  </a>
+                <Link href={link.href} key={index.toString()}>
+                  <a className={["nav-link"]}>{link.title}</a>
                 </Link>
               );
             })}

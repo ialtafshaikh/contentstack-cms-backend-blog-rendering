@@ -10,10 +10,8 @@ function CardComponent(props) {
         <Card.Img variant="top" src={props.blog.blog_banner_image.url} />
         <Card.Body>
           <Card.Title>{props.blog.title}</Card.Title>
-          <Card.Text>
-            {parse(props.blog.blog_content.slice(0, 125) + "...")}
-          </Card.Text>
-          <Link href={`blog` + props.blog.url}>
+          {parse(props.blog.blog_content.slice(0, 125) + "...")}
+          <Link href={`/blog` + props.blog.url}>
             <a>
               <Button variant="secondary">Read More</Button>
             </a>

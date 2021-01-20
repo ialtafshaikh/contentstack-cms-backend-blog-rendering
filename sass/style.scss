@@ -75,6 +75,11 @@ $secondary-color: #2f9ee5;
           font-size: 18px;
           line-height: 1.3;
           text-align: justify;
+          p > img {
+            display: block;
+            width: 80% !important;
+            margin: 0 auto !important;
+          }
         }
       }
     }

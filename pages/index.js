@@ -17,17 +17,17 @@ export default function Home(props) {
           <div className="container">
             {props.blogs.map((blog, index) => {
               return index % 4 === 0 ? (
-                <Row key={index}>
-                  {props.blogs.slice(index, index + 4).map((blog) => {
+                <Row key={(index + 1).toString()}>
+                  {props.blogs.slice(index, index + 4).map((blog, index) => {
                     return (
-                      <Col className="py-4" key={blog.blogID}>
+                      <Col className="py-4" key={blog.uid}>
                         <Card blog={blog} />
                       </Col>
                     );
                   })}
                 </Row>
               ) : (
-                <></>
+                ""
               );
             })}
           </div>

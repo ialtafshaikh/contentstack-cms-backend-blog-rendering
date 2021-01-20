@@ -42,7 +42,9 @@ function BlogDetail(props) {
                   <img src={props.blog.blog_banner_image.url} alt="img" />
                 </div>
                 <div className="blog-content">
-                  <p className="content">{parse(props.blog.blog_content)}</p>
+                  <div className="content">
+                    {parse(props.blog.blog_content)}
+                  </div>
                 </div>
               </div>
             </div>
