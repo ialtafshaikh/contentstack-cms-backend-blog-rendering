@@ -1,10 +1,10 @@
 import { Col, Row } from "react-bootstrap";
 
-import getAllEnteries from "../contentstack/queries/getAllEnteries";
-
 // components
 import Layout from "../components/Layout";
 import Card from "../components/Card";
+
+import getAllEnteries from "../contentstack/queries/getAllEnteries";
 
 export default function Home(props) {
   return (
