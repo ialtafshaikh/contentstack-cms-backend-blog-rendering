@@ -37,7 +37,7 @@ CS_ENVIRONMENT=<your environment name>
 **NOTE**
 - For development all the data are published in `altaf_development` environment
 - And For hosted application the environment for publishing the data is set to 'altaf_production` so to see any update in live hosted website kindly publish entry in respective environment.
-- My stack name `Team3` and all the content-types are inside single label `Altaf Blog Rendering` so kindly choose the `Label` in view by filter to see the content-type in Label view.
+- My stack name `Team3` and all the content-types are inside single label `Altaf Blog Rendering` so kindly choose the `Label` in `VIEW BY` filter to see the content-type in Label view.
 
 First, run the development server:
 
