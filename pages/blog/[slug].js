@@ -13,7 +13,7 @@ function BlogDetail(props) {
   const renderNewBlog = async (event) => {
     const blogID = event.target.parentNode.id;
     const { data } = await axios.post(
-      "http://localhost:3000/api/getRelatedLinkData",
+      event.view.location.origin + "/api/getRelatedLinkData",
       {
         blogID: blogID,
       }
