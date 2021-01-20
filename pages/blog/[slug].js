@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import parse from "html-react-parser";
+import axios from "axios";
 
 // components
 import Layout from "../../components/Layout";
-import getAllEnteries from "../../contentstack/queries/getAllEnteries";
 import RelatedLinks from "../../components/RelatedLinks";
-import getEnteryById from "../../contentstack/queries/getEnteryById";
-import axios from "axios";
+
+import getAllEnteries from "../../contentstack/queries/getAllEnteries";
 
 function BlogDetail(props) {
   const router = useRouter();

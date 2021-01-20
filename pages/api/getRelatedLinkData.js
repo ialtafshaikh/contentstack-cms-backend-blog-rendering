@@ -1,4 +1,3 @@
-import getEnteryById from "../../contentstack/queries/getEnteryById";
 import getAllEnteries from "../../contentstack/queries/getAllEnteries";
 
 export default async function getRelatedLinkData(req, res) {

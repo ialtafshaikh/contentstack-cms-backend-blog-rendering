@@ -1,6 +1,3 @@
-import { useRouter } from "next/router";
-import getEnteryById from "../contentstack/queries/getEnteryById";
-
 function RelatedLinks(props) {
   const related_links = JSON.parse(JSON.stringify(props.blog.related_links));
 
