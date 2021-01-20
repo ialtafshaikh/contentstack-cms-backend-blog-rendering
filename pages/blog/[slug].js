@@ -18,9 +18,11 @@ function BlogDetail(props) {
         blogID: blogID,
       }
     );
-    if (typeof data !== "undefined") {
+    try {
       router.push("/blog" + data.blog.url);
       return;
+    } catch (err) {
+      return err;
     }
   };
 

@@ -37,7 +37,7 @@ export default function Home(props) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const result = await getAllEnteries("blogs");
   const navbarData = await getAllEnteries("navbar");
   const footerData = await getAllEnteries("footer");
