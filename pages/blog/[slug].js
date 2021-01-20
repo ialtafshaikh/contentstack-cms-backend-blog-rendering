@@ -22,6 +22,7 @@ function BlogDetail(props) {
       router.push("/blog" + data.blog.url);
       return;
     } catch (err) {
+      console.log(err);
       return err;
     }
   };
@@ -67,6 +68,15 @@ export const getServerSideProps = async (context) => {
       prop: "url",
       value: "/" + context.params.slug,
     });
+
+    if (typeof result[0] === "undefined") {
+      return {
+        redirect: {
+          destination: "/",
+          permanent: false,
+        },
+      };
+    }
 
     const navbarData = await getAllEnteries("navbar");
     const footerData = await getAllEnteries("footer");
