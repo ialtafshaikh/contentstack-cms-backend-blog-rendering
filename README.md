@@ -4,7 +4,6 @@ Using contentstack as a backend for creating a content model for a blog website 
 
 ## Features
 
-- all pages are server side rendered
 - content-modelling is done using Contentstack CMS
 - content-types are grouped using Labels in stack.
 - app is fetching data from Contentstack Backend
