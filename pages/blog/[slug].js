@@ -5,9 +5,22 @@ import parse from "html-react-parser";
 import Layout from "../../components/Layout";
 import getAllEnteries from "../../contentstack/queries/getAllEnteries";
 import RelatedLinks from "../../components/RelatedLinks";
+import getEnteryById from "../../contentstack/queries/getEnteryById";
+import axios from "axios";
 
 function BlogDetail(props) {
   const router = useRouter();
+  const renderNewBlog = async (event) => {
+    const blogID = event.target.parentNode.id;
+    const { data } = await axios.post(
+      "http://localhost:3000/api/getRelatedLinkData",
+      {
+        blogID: blogID,
+      }
+    );
+
+    router.push("/blog" + data.blog.url);
+  };
 
   return router.isFallback ? (
     <p>Loading..</p>
@@ -33,7 +46,7 @@ function BlogDetail(props) {
                 </div>
               </div>
             </div>
-            <RelatedLinks blog={props.blog} />
+            <RelatedLinks blog={props.blog} renderNewBlog={renderNewBlog} />
           </div>
         </main>
       </Layout>
@@ -46,6 +59,7 @@ export const getStaticProps = async (context) => {
     prop: "url",
     value: "/" + context.params.slug,
   });
+
   const navbarData = await getAllEnteries("navbar");
   const footerData = await getAllEnteries("footer");
 
