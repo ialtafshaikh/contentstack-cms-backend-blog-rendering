@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import parse from "html-react-parser";
 
 // components
 import Layout from "../../components/Layout";
@@ -28,7 +29,7 @@ function BlogDetail(props) {
                   <img src={props.blog.blog_banner_image.url} alt="img" />
                 </div>
                 <div className="blog-content">
-                  <p className="content">{props.blog.blog_content}</p>
+                  <p className="content">{parse(props.blog.blog_content)}</p>
                 </div>
               </div>
             </div>
