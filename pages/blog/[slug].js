@@ -10,13 +10,11 @@ import getAllEnteries from "../../contentstack/queries/getAllEnteries";
 
 function BlogDetail(props) {
   const router = useRouter();
+
   const renderNewBlog = async (event) => {
     const blogID = event.target.parentNode.id;
-    const { data } = await axios.post(
-      event.view.location.origin + "/api/getRelatedLinkData",
-      {
-        blogID: blogID,
-      }
+    const { data } = await axios.get(
+      event.view.location.origin + "/api/getRelatedLinkData/" + blogID
     );
     try {
       router.push("/blog" + data.blog.url);
