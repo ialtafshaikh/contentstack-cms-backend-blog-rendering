@@ -12,6 +12,7 @@ Using contentstack as a backend for creating a content model for a blog website 
 - app make use of sass and css
 - nextjs serverless function implemented
 - implemented blog url using slugs
+- hosted on **Vercel**
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -86,8 +87,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## Live Demo of this Project
-
-The app is hosted but it is failing to load because of some error..so try to run the project locally
 
 [Live link](https://contentstack-cms-backend-blog-rendering.vercel.app/)
 
