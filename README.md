@@ -4,7 +4,6 @@ Using contentstack as a backend for creating a content model for a blog website 
 
 ## Features
 
-- all pages are server side rendered
 - content-modelling is done using Contentstack CMS
 - content-types are grouped using Labels in stack.
 - app is fetching data from Contentstack Backend
@@ -12,7 +11,7 @@ Using contentstack as a backend for creating a content model for a blog website 
 - bootsrap is used to layout and design the pages and components
 - app make use of sass and css
 - nextjs serverless function implemented
-- nextjs app is hosted on **Vercel**
+- implemented blog url using slugs
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
